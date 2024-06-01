@@ -3,12 +3,20 @@
  * Do not include SCSS code in this file.
  */
 
-/**
+ @tailwind base;
+ @tailwind components;
+
+ /**
  * Import variables
  */
 
 @import "variables";
 
+/**
+ * Import mixins and functions
+ */
+
+ @import "mixins";
 /**
  * Import npm dependencies
  * see: https://v2.parceljs.org/features/module-resolution/
@@ -17,14 +25,20 @@
 
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
 
+@tailwind utilities;
 /**
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
 
 @import "layouts/home";
+@import "components/event";
+@import "components/card";
 
 /**
  * Do NOT include anything else in this file!
  */
+
+

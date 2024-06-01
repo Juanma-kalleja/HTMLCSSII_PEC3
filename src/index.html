@@ -5,22 +5,133 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+  
+    <title>PEC 3: Home</title>
   </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+  <body class="font-sans bg-light">
+    <include src="./header.html"></include>
+    <main class="grid grid-cols-4 gap-0">
+      <div  class="col-span-4 m-6">
+        <h1 class="text-6xl text-primary font-semibold">Bienvenidos a Tacofest</h1>
+        <span>
+            Un Festín para los Sentidos, explora la Auténtica Gastronomía de México
+        </span>
+      </div>
+
+      <div class="col-span-4 mb-6 md:hidden">
+        <img src="./assets/images/tortillas.jpg" class="" alt="tortillas mexicanas">
+      </div>
+
+      <div class="col-span-4 ms-6">
+        <h2 class=""><em>Eventos:</em></h2>
+      </div>
+
+      <ul class="grid grid-cols-4 grid-rows-4 grid-cols-subgrid col-span-4 row-span-4">
+        <li 
+        class="poster-card z-0 col-start-1 row-start-1 col-end-5 row-end-5 " 
+        style="background-image: url(./assets/images/mole.jpg)">
+      </li>
+      <li 
+        class="poster-card z-10 col-start-2 row-start-1" 
+        style="background-image: url(./assets/images/aguacate.jpg)">
+      </li>
+      <li 
+        class="poster-card z-10 col-start-3 row-start-2" 
+        style="background-image: url(./assets/images/limon.jpg)">
+      </li>
+      <li 
+        class="poster-card z-10 col-start-1 row-start-3" 
+        style="background-image: url(./assets/images/quesadillas.jpg)">
+      </li>
+      <li 
+        class="poster-card z-10 col-start-2 row-start-4" 
+        style="background-image: url(./assets/images/chile.jpg)">
+      </li>
+
+      <include src="./views/event.html" locals='{
+        "col": "md:col-start-1",
+        "row": "md:row-start-1",
+        "title": "Hola mundo A",
+        "date": "Sábado, 6 de julio",
+        "hour": "2:00 p.m.-10:00 p.m.",
+        "location": "Zócalo, Puebla"
+    }'></include>
+
+      <include src="./views/event.html" locals='{
+        "col": "md:col-start-3",
+        "row": "md:row-start-1",
+        "title": "Hola mundo B",
+        "date": "Sábado, 6 de julio",
+        "hour": "2:00 p.m.-10:00 p.m.",
+        "location": "Zócalo, Puebla"
+    }'></include>
+
+      <include src="./views/event.html" locals='{
+        "col": "md:col-start-4",
+        "row": "md:row-start-2",
+        "title": "Hola mundo C",
+        "date": "Sábado, 6 de julio",
+        "hour": "2:00 p.m.-10:00 p.m.",
+        "location": "Zócalo, Puebla"
+    }'></include>
+
+      <include src="./views/event.html" locals='{
+        "col": "md:col-start-2",
+        "row": "md:row-start-3",
+        "title": "Hola mundo D",
+        "date": "Sábado, 6 de julio",
+        "hour": "2:00 p.m.-10:00 p.m.",
+        "location": "Zócalo, Puebla"
+    }'></include>
+
+      <include src="./views/event.html" locals='{
+        "col": "md:col-start-3",
+        "row": "md:row-start-4",
+        "title": "Hola mundo E",
+        "date": "Sábado, 6 de julio",
+        "hour": "2:00 p.m.-10:00 p.m.",
+        "location": "Zócalo, Puebla"
+      }'></include>
+
+      <include src="./views/event.html" locals='{
+        "col": "md:col-start-4",
+        "row": "md:row-start-4",
+        "title": "Hola mundo F",
+        "date": "Sábado, 6 de julio",
+        "hour": "2:00 p.m.-10:00 p.m.",
+        "location": "Zócalo, Puebla"
+      }'></include>
+
+      </ul>
+
+      <div class="col-span-4 m-6 md:col-span-2">
+        <h4 class="font-bold">¡Pilla tus entradas antes de que vuelen!</h4>
+        <p>¡Para conseguir tus entradas al festival de comida mexicana, dirígete a tiendas locales asociadas, taquerías o restaurantes mexicanos cercanos! ¡No te pierdas este festín de sabores y reserva tu lugar hoy mismo!</p>
     </div>
+
+      <div class="col-span-4 m-6 place-self-center md:col-span-2">
+        <ul class="flex justify-center items-center space-x-4">
+            <li class="">
+                <a class="text-primary" href="#"><i class="fa-brands fa-instagram fa-fade fa-2xl"></i></a>
+            </li>
+
+            <li class="">
+                <a class="text-primary" href="#"><i class="fa-brands fa-tiktok fa-fade fa-2xl"></i></a>
+            </li>
+
+            <li class="">
+                <a class="text-primary" href="#"><i class="fa-brands fa-x-twitter fa-fade fa-2xl"></i></a>
+            </li>
+        </ul>
+    </div>
+    </main>
+
+
+
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>

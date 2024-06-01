@@ -1,0 +1,18 @@
+.card{
+    @apply basis-full sm:basis-1/2 lg:basis-1/4 overflow-hidden m-3;
+    &--hover {
+        @apply hover:bg-secondary hover:border-4 hover:border-primary;
+    }
+    &__image {
+        @apply w-full object-cover;
+    }
+    &__body {
+        @apply text-center p-3;
+    }
+    &__title{
+        @apply font-bold text-lg text-primary;
+    }
+    &__text {
+        @include text-ellipsis(4);
+    }
+}
