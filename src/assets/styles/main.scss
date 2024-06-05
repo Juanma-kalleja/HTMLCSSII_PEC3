@@ -8,9 +8,6 @@
 
  /**
  * Import variables
- */
-
-@import "variables";
 
 /**
  * Import mixins and functions
@@ -33,7 +30,6 @@
  * It's a best practice to use a different partial for each page
  */
 
-@import "layouts/home";
 @import "components/event";
 @import "components/card";
 

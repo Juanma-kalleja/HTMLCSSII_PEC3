@@ -15,31 +15,3 @@
       }
     }
   }
-
-// Event cards estilos
-@mixin event-card-styles ($column, $row) {
-    background-color: $light;
-    background-size: cover;
-    @include media-breakpoint-up(lg)
-     {
-      &:hover {
-        display: block;
-        color: $light;
-        background-color: $secondary;
-    }
-        grid-row: $row;
-        grid-column: $column;
-    }
-  }
-
-// Estilos de imagenes de eventos
-@mixin event-image-styles ($url, $column, $row) {
-    display: none;
-    @include media-breakpoint-up(lg) {
-        display: block;
-        grid-row: $row;
-        grid-column-start: $column;
-        background-image: url($url);
-        background-size: cover;
-    }
-  }
